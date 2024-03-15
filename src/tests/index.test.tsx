@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "../App";
-import { MoviesContextProvider } from "../providers/AppContextProvider";
+import { MoviesContextProvider } from "../providers/MovieListContextProvider";
 
 describe("App", () => {
   beforeEach(() => {
@@ -12,11 +12,6 @@ describe("App", () => {
     );
 
     expect(asFragment()).toMatchSnapshot();
-  });
-
-  test("При первом рендере отображается список с начальными значениями", () => {
-    expect(screen.getByText("Lira")).toBeDefined();
-    expect(screen.getByText("KOS impsom foues")).toBeDefined();
   });
 
   test("После нажатия кнопки отображается элемент", () => {

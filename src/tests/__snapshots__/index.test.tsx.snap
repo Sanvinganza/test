@@ -1,53 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App > После нажатия кнопки изменяется context 1`] = `
-<DocumentFragment>
-  <h1>
-    Films :
-  </h1>
-  <br />
-  <ul>
-    <ol>
-      <h2>
-        Lira
-      </h2>
-      <h4>
-        KOS impsom foues
-      </h4>
-    </ol>
-    <ol>
-      <h2>
-        Harry
-      </h2>
-      <h4>
-        Lorem impsom foues
-      </h4>
-    </ol>
-    <ol>
-      <h2>
-        Harry
-      </h2>
-      <h4>
-        Lorem impsom foues
-      </h4>
-    </ol>
-    <ol>
-      <h2>
-        Harry
-      </h2>
-      <h4>
-        Lorem impsom foues
-      </h4>
-    </ol>
-  </ul>
-  <button
-    data-testid="button-change-id"
-  >
-    Click
-  </button>
-</DocumentFragment>
-`;
-
 exports[`App > После нажатия кнопки отображается элемент 1`] = `
 <DocumentFragment>
   <h1>
@@ -57,41 +9,38 @@ exports[`App > После нажатия кнопки отображается �
   <ul>
     <ol>
       <h2>
-        Lira
+        DR.Strange
       </h2>
       <h4>
-        KOS impsom foues
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/
       </h4>
     </ol>
-  </ul>
-  <button
-    data-testid="button-change-id"
-  >
-    Click
-  </button>
-</DocumentFragment>
-`;
-
-exports[`App > При первом рендере отображается список с начальными значениями 1`] = `
-<DocumentFragment>
-  <h1>
-    Films :
-  </h1>
-  <br />
-  <ul>
     <ol>
       <h2>
-        Lira
+        Harry Potter
       </h2>
       <h4>
-        KOS impsom foues
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/
+      </h4>
+    </ol>
+    <ol>
+      <h2>
+        Star Wars
+      </h2>
+      <h4>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/
       </h4>
     </ol>
   </ul>
   <button
     data-testid="button-change-id"
   >
-    Click
+    add Movie "Harry"
+  </button>
+  <button
+    data-testid="button-filter-id"
+  >
+    Filter Movies
   </button>
 </DocumentFragment>
 `;

@@ -2,13 +2,13 @@ import React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./App.tsx";
 
-import { MoviesContextProvider } from "./providers/AppContextProvider.tsx";
+import { MovieListContextProvider } from "./providers/MovieListContextProvider.tsx";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MoviesContextProvider>
+    <MovieListContextProvider>
       <App />
-    </MoviesContextProvider>
+    </MovieListContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

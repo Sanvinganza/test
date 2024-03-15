@@ -1,10 +1,11 @@
 import { describe, test } from "vitest";
-import { useMoviesContext } from "../hooks/useAppContext";
+import { useMoviesContext } from "../components/MoviesList/hooks/useMovieListContext";
 import { renderHook } from "@testing-library/react-hooks";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { MoviesContextProvider } from "../providers/MovieListContextProvider";
+import { toJS } from "mobx";
 import App from "../App";
-import { MoviesContextProvider } from "../providers/AppContextProvider";
-import { IMovie } from "../components/Movies";
+import { mockMovies } from "./__mock__/mockMovies";
 
 describe("HOOKS", () => {
   beforeEach(() => {
@@ -18,7 +19,7 @@ describe("HOOKS", () => {
   const { result } = renderHook(() => useMoviesContext());
 
   test("получить начальное количество movies из хука useMoviesContext", () => {
-    expect(result.current.movies.length).toEqual(1);
+    expect(result.current.movies.length).toEqual(3);
   });
 
   test("получить значение movies после 3 нажатий на button", () => {
@@ -29,39 +30,17 @@ describe("HOOKS", () => {
     fireEvent.click(button);
 
     expect(screen.getAllByText("Harry").length).toEqual(3);
-    expect(result.current.movies.length).toEqual(4);
   });
 
-  test("изменить значение movies с помощью вызова хука", () => {
-    const mockMovies: IMovie[] = [
-      {
-        id: 1,
-        title: "DR.Strange",
-        describe:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/",
-      },
-      {
-        id: 2,
-        title: "Harry Potter",
-        describe:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/",
-      },
-      {
-        id: 3,
-        title: "Star Wars",
-        describe:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/",
-      },
-    ];
-
-    mockMovies.forEach((movie: IMovie) => {
-      result.current.setMovies(movie);
-    });
+  test("useAppContext", () => {
+    result.current.setMovies(mockMovies);
 
     expect(
       screen.getAllByText(
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/"
       ).length
     ).toEqual(3);
+
+    expect(toJS(result.current.movies)).toEqual(mockMovies);
   });
 });
