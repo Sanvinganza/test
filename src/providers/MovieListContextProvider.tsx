@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { movieListContext } from "../components/MoviesList/hooks/useMovieListContext";
+import { MovieListContext } from "../components/MoviesList/hooks/useMovieListContext";
 import { useLocalObservable } from "mobx-react-lite";
 import { movieListState } from "../states/stateMovieList";
 
@@ -8,7 +8,7 @@ export const MovieListContextProvider: FC<any> = ({ children }) => {
     () => movieListState
   );
   return (
-    <movieListContext.Provider
+    <MovieListContext.Provider
       value={movieListStatelocalObservable}
       children={children}
     />
