@@ -1,11 +1,11 @@
 import { runInAction } from "mobx";
-import { ICol } from "./types";
+import { IMovieTableItem } from "./types";
 
-export const tableState = (columns: ICol[]) => ({
-  columns,
-  setColumns(cols: ICol[]) {
+export const tableState = (movieTableItem: IMovieTableItem[]) => ({
+  movieTableItem,
+  setMovieTableItem(items: IMovieTableItem[]) {
     runInAction(() => {
-      this.columns = cols;
+      this.movieTableItem = items;
     });
   },
 });

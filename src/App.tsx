@@ -1,12 +1,10 @@
 import { observer } from "mobx-react-lite";
-import { MovieList } from "./components/MoviesList";
-// import { MovieTable } from "./components/MoviesTable/TableMovies";
+import { TableMovies } from "./components/MoviesTable";
 
 const App = observer(() => {
   return (
     <>
-      <MovieList />
-      {/* <MovieTable /> */}
+      <TableMovies />
     </>
   );
 });

@@ -26,7 +26,6 @@
     "react-imask": "^6.6.3",
     "react-router-dom": "^6.0.2",
     "store": "^2.0.12",
-    "superagent": "^8.0.9",
     "uuid": "^9.0.1",
     "web-vitals": "^3.5.2"
   },

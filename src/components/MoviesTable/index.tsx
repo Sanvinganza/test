@@ -1,1 +1,1 @@
-export { MovieTable as Table } from "./TableMovies";
+export { TableMovies } from "./TableMovies";
