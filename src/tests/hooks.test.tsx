@@ -1,8 +1,8 @@
 import { describe, test } from "vitest";
-import { useMoviesContext } from "../components/MoviesList/hooks/useMovieListContext";
+import { useMovieListContext } from "../components/MoviesList/hooks/useMovieListContext";
 import { renderHook } from "@testing-library/react-hooks";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { MoviesContextProvider } from "../providers/MovieListContextProvider";
+import { MovieListContextProvider } from "../providers/MovieListContextProvider";
 import { toJS } from "mobx";
 import App from "../App";
 import { mockMovies } from "./__mock__/mockMovies";
@@ -10,13 +10,13 @@ import { mockMovies } from "./__mock__/mockMovies";
 describe("HOOKS", () => {
   beforeEach(() => {
     render(
-      <MoviesContextProvider>
+      <MovieListContextProvider>
         <App />
-      </MoviesContextProvider>
+      </MovieListContextProvider>
     );
   });
 
-  const { result } = renderHook(() => useMoviesContext());
+  const { result } = renderHook(() => useMovieListContext());
 
   test("получить начальное количество movies из хука useMoviesContext", () => {
     expect(result.current.movies.length).toEqual(3);

@@ -1,14 +1,14 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "../App";
-import { MoviesContextProvider } from "../providers/MovieListContextProvider";
+import { MovieListContextProvider } from "../providers/MovieListContextProvider";
 
 describe("App", () => {
   beforeEach(() => {
     const { asFragment } = render(
-      <MoviesContextProvider>
+      <MovieListContextProvider>
         <App />
-      </MoviesContextProvider>
+      </MovieListContextProvider>
     );
 
     expect(asFragment()).toMatchSnapshot();

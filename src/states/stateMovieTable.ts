@@ -1,5 +1,5 @@
 import { observable, runInAction } from "mobx";
-import { IMovieTableItem } from "../components/MoviesTable/types";
+import { IMovieTableItem, Order } from "../components/MoviesTable/types";
 
 const data = [
   {
@@ -234,6 +234,36 @@ export const movieTableState = {
   setMovieTableItem(movies: IMovieTableItem[]) {
     runInAction(() => {
       this.movies.replace(movies);
+    });
+  },
+  page: 0,
+  setPage(newPage: number) {
+    runInAction(() => {
+      this.page = newPage;
+    });
+  },
+  rowsPerPage: 5,
+  setRowsPerPage(newRowsPerPage: number) {
+    runInAction(() => {
+      this.rowsPerPage = newRowsPerPage;
+    });
+  },
+  orderBy: "rating",
+  setOrderBy(newOrderBy: keyof IMovieTableItem) {
+    runInAction(() => {
+      this.orderBy = newOrderBy;
+    });
+  },
+  order: "asc" as Order,
+  setOrder(newOrder: Order) {
+    runInAction(() => {
+      this.order = newOrder;
+    });
+  },
+  selected: [] as number[],
+  setSelected(newSelected: number[]) {
+    runInAction(() => {
+      this.selected = newSelected;
     });
   },
 };

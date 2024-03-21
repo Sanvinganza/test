@@ -1,4 +1,4 @@
-import { IMovieListItem } from "../../components/MoviesList/Movies";
+import { IMovieListItem } from "../../components/MoviesList/types";
 
 export const mockMovies: IMovieListItem[] = [
   {
