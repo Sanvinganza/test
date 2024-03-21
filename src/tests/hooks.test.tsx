@@ -6,14 +6,19 @@ import { MovieListContextProvider } from "../providers/MovieListContextProvider"
 import { toJS } from "mobx";
 import App from "../App";
 import { mockMovies } from "./__mock__/mockMovies";
+import { MovieTableContextProvider } from "../providers/MovieTableContextProvider";
 
 describe("HOOKS", () => {
   beforeEach(() => {
-    render(
-      <MovieListContextProvider>
-        <App />
-      </MovieListContextProvider>
+    const { asFragment } = render(
+      <MovieTableContextProvider>
+        <MovieListContextProvider>
+          <App />
+        </MovieListContextProvider>
+      </MovieTableContextProvider>
     );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   const { result } = renderHook(() => useMovieListContext());
