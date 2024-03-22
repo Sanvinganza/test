@@ -8,8 +8,9 @@ import { useMovieTableContext } from "../MoviesList/hooks/useMovieTableContext";
 import { MoviesTableToolbar } from "./MoviesTableToolbar/MoviesTableToolbar";
 import { MoviesTableHead } from "./MoviesTableHead/MoviesTableHead";
 import { MoviesTableBody } from "./MoviesTableBody/MoviesTableBody";
+import { observer } from "mobx-react-lite";
 
-export function TableMovies() {
+export const TableMovies = observer(() => {
   const { movies, page, rowsPerPage, selected, setPage, setRowsPerPage } =
     useMovieTableContext();
 
@@ -43,4 +44,4 @@ export function TableMovies() {
       </Paper>
     </Box>
   );
-}
+});

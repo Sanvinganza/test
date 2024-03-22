@@ -1,9 +1,11 @@
 import { Checkbox, TableBody, TableCell, TableRow } from "@mui/material";
 import { getComparator, stableSort } from "../utils";
 import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
+import { observer } from "mobx-react-lite";
 
-export const MoviesTableBody = () => {
-  const { movies, order, orderBy, page, rowsPerPage, selected, setSelected } = useMovieTableContext();
+export const MoviesTableBody = observer(() => {
+  const { movies, order, orderBy, page, rowsPerPage, selected, setSelected } =
+    useMovieTableContext();
 
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - movies.length) : 0;
@@ -76,4 +78,4 @@ export const MoviesTableBody = () => {
       )}
     </TableBody>
   );
-};
+});

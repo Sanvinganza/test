@@ -1,5 +1,4 @@
 import {
-  Box,
   Checkbox,
   TableCell,
   TableHead,
@@ -7,8 +6,8 @@ import {
   TableSortLabel,
 } from "@mui/material";
 import { HeadCell, IMovieTableItem } from "../types";
-import { visuallyHidden } from "@mui/utils";
 import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
+import { observer } from "mobx-react-lite";
 
 const headCells: readonly HeadCell[] = [
   {
@@ -37,13 +36,12 @@ const headCells: readonly HeadCell[] = [
   },
 ];
 
-export function MoviesTableHead() {
+export const MoviesTableHead = observer(() => {
   const {
     movies,
     order,
     orderBy,
     selected,
-    rowsPerPage,
     setSelected,
     setOrder,
     setOrderBy,
@@ -72,17 +70,16 @@ export function MoviesTableHead() {
       onRequestSort(event, property);
     };
 
-  const numSelected = selected.length;
-  const rowCount = rowsPerPage;
-
   return (
     <TableHead>
       <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
             color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
+            indeterminate={
+              selected.length > 0 && selected.length < movies.length
+            }
+            checked={movies.length > 0 && selected.length === movies.length}
             onChange={onSelectAllClick}
             inputProps={{
               "aria-label": "select all desserts",
@@ -100,15 +97,10 @@ export function MoviesTableHead() {
               direction={orderBy === headCell.id ? order : "asc"}
               onClick={createSortHandler(headCell.id)}>
               {headCell.label}
-              {orderBy === headCell.id ? (
-                <Box component="span" sx={visuallyHidden}>
-                  {order === "desc" ? "sorted descending" : "sorted ascending"}
-                </Box>
-              ) : null}
             </TableSortLabel>
           </TableCell>
         ))}
       </TableRow>
     </TableHead>
   );
-}
+});
