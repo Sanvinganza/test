@@ -7,9 +7,6 @@ export const MoviesTableBody = observer(() => {
   const { movies, order, orderBy, page, rowsPerPage, selected, setSelected } =
     useMovieTableContext();
 
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - movies.length) : 0;
-
   const visibleRows = stableSort(movies, getComparator(order, orderBy)).slice(
     page * rowsPerPage,
     page * rowsPerPage + rowsPerPage
@@ -68,14 +65,6 @@ export const MoviesTableBody = observer(() => {
           </TableRow>
         );
       })}
-      {emptyRows > 0 && (
-        <TableRow
-          style={{
-            height: 53 * emptyRows,
-          }}>
-          <TableCell colSpan={6} />
-        </TableRow>
-      )}
     </TableBody>
   );
 });

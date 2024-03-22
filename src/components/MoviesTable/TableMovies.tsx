@@ -10,10 +10,10 @@ import { MoviesTableHead } from "./MoviesTableHead/MoviesTableHead";
 import { MoviesTableBody } from "./MoviesTableBody/MoviesTableBody";
 import { observer } from "mobx-react-lite";
 
+export const rowsPerPageOptions = [5, 10, 25];
 export const TableMovies = observer(() => {
   const { movies, page, rowsPerPage, selected, setPage, setRowsPerPage } =
     useMovieTableContext();
-
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
@@ -28,7 +28,7 @@ export const TableMovies = observer(() => {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={rowsPerPageOptions}
           component="div"
           count={movies.length}
           rowsPerPage={rowsPerPage}
@@ -37,7 +37,18 @@ export const TableMovies = observer(() => {
             setPage(newPage);
           }}
           onRowsPerPageChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-            setRowsPerPage(parseInt(event.target.value, 10));
+            switch (+event.target.value) {
+              case 5:
+                setRowsPerPage(5);
+                break;
+              case 10:
+                setRowsPerPage(10);
+                break;
+              case 25:
+                setRowsPerPage(25);
+                break;
+            }
+
             setPage(0);
           }}
         />

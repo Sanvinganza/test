@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`HOOKS > useAppContext 1`] = `
+exports[`HOOKS > useMovieListContext 1`] = `
 <DocumentFragment>
   <div
     class="MuiBox-root css-8atqhb"
@@ -94,11 +94,6 @@ exports[`HOOKS > useAppContext 1`] = `
                   tabindex="0"
                 >
                   RATING
-                  <span
-                    class="MuiBox-root css-trfuzi"
-                  >
-                    sorted ascending
-                  </span>
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
@@ -692,11 +687,6 @@ exports[`HOOKS > получить значение movies после 3 нажа�
                   tabindex="0"
                 >
                   RATING
-                  <span
-                    class="MuiBox-root css-trfuzi"
-                  >
-                    sorted ascending
-                  </span>
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
@@ -1290,11 +1280,6 @@ exports[`HOOKS > получить начальное количество movies
                   tabindex="0"
                 >
                   RATING
-                  <span
-                    class="MuiBox-root css-trfuzi"
-                  >
-                    sorted ascending
-                  </span>
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"

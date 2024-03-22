@@ -94,11 +94,6 @@ exports[`App > После нажатия кнопки отображается �
                   tabindex="0"
                 >
                   RATING
-                  <span
-                    class="MuiBox-root css-trfuzi"
-                  >
-                    sorted ascending
-                  </span>
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"

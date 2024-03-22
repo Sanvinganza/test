@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
-import App from "../App";
-import { MovieListContextProvider } from "../providers/MovieListContextProvider";
+import App from "../../../App";
+import { MovieListContextProvider } from "../../../providers/MovieListContextProvider";
 
 describe("App", () => {
   beforeEach(() => {

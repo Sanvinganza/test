@@ -1,21 +1,18 @@
 import { describe, test } from "vitest";
-import { useMovieListContext } from "../components/MoviesList/hooks/useMovieListContext";
 import { renderHook } from "@testing-library/react-hooks";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { MovieListContextProvider } from "../providers/MovieListContextProvider";
 import { toJS } from "mobx";
-import App from "../App";
 import { mockMovies } from "./__mock__/mockMovies";
-import { MovieTableContextProvider } from "../providers/MovieTableContextProvider";
+import { MovieListContextProvider } from "../../../providers/MovieListContextProvider";
+import { useMovieListContext } from "../hooks/useMovieListContext";
+import App from "../../../App";
 
 describe("HOOKS", () => {
   beforeEach(() => {
     const { asFragment } = render(
-      <MovieTableContextProvider>
-        <MovieListContextProvider>
-          <App />
-        </MovieListContextProvider>
-      </MovieTableContextProvider>
+      <MovieListContextProvider>
+        <App />
+      </MovieListContextProvider>
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -37,7 +34,7 @@ describe("HOOKS", () => {
     expect(screen.getAllByText("Harry").length).toEqual(3);
   });
 
-  test("useAppContext", () => {
+  test("useMovieListContext", () => {
     result.current.setMovies(mockMovies);
 
     expect(
