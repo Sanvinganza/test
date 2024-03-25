@@ -19,8 +19,10 @@ describe("stateMovieTable", () => {
   test("значения инициализируются корректно", () => {
     const { result } = renderHook(() => useMovieTableContext());
     // декомпозицию объекта нельзя использовать,
-    // значения не обновляются после вызова функции
+    // значения не обновляются после вызова set-функций
     // только для проверки initial state
+
+    expect(result.current).toBeDefined();
 
     const { movies, order, page, selected, rowsPerPage, orderBy } =
       result.current;
@@ -50,4 +52,5 @@ describe("stateMovieTable", () => {
     expect(result.current.rowsPerPage).toEqual(10);
     expect(result.current.selected).toEqual([1, 2, 3, 5]);
   });
+  test("set-функция setMovieTableItem не аффектит другие значения state", () => {});
 });

@@ -5,9 +5,10 @@ import {
   TableRow,
   TableSortLabel,
 } from "@mui/material";
-import { HeadCell, IMovieTableItem } from "../types";
+import { HeadCell } from "../types";
 import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
 import { observer } from "mobx-react-lite";
+import { useGetOnSelectAllClick, useGetOnSortHandle } from "./hooks";
 
 const headCells: readonly HeadCell[] = [
   {
@@ -37,39 +38,9 @@ const headCells: readonly HeadCell[] = [
 ];
 
 export const MoviesTableHead = observer(() => {
-  const {
-    movies,
-    order,
-    orderBy,
-    selected,
-    setSelected,
-    setOrder,
-    setOrderBy,
-  } = useMovieTableContext();
-
-  const onRequestSort = (
-    _: React.MouseEvent<unknown>,
-    property: keyof IMovieTableItem
-  ) => {
-    const isAsc = orderBy === property && order === "asc";
-    setOrder(isAsc ? "desc" : "asc");
-    setOrderBy(property);
-  };
-
-  const onSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.checked) {
-      const newSelected = movies.map((n) => n.id);
-      setSelected(newSelected);
-      return;
-    }
-    setSelected([]);
-  };
-
-  const createSortHandler =
-    (property: keyof IMovieTableItem) => (event: React.MouseEvent<unknown>) => {
-      onRequestSort(event, property);
-    };
-
+  const { movies, order, orderBy, selected } = useMovieTableContext();
+  const { onSortHandle } = useGetOnSortHandle();
+  const { onSelectAllClick } = useGetOnSelectAllClick();
   return (
     <TableHead>
       <TableRow>
@@ -80,7 +51,7 @@ export const MoviesTableHead = observer(() => {
               selected.length > 0 && selected.length < movies.length
             }
             checked={movies.length > 0 && selected.length === movies.length}
-            onChange={onSelectAllClick}
+            onChange={(event) => onSelectAllClick(event)}
             inputProps={{
               "aria-label": "select all desserts",
             }}
@@ -95,7 +66,7 @@ export const MoviesTableHead = observer(() => {
             <TableSortLabel
               active={orderBy === headCell.id}
               direction={orderBy === headCell.id ? order : "asc"}
-              onClick={createSortHandler(headCell.id)}>
+              onClick={(event) => onSortHandle(event, headCell.id)}>
               {headCell.label}
             </TableSortLabel>
           </TableCell>

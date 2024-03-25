@@ -171,7 +171,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-0"
+                    aria-labelledby="table-checkbox-0"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -194,7 +194,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-0"
+                id="table-checkbox-0"
                 scope="row"
               >
                 Dances with Wolves
@@ -228,7 +228,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-1"
+                    aria-labelledby="table-checkbox-1"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -251,7 +251,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-1"
+                id="table-checkbox-1"
                 scope="row"
               >
                 Groundhog Day
@@ -285,7 +285,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-2"
+                    aria-labelledby="table-checkbox-2"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -308,7 +308,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-2"
+                id="table-checkbox-2"
                 scope="row"
               >
                 The Incredibles
@@ -342,7 +342,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-3"
+                    aria-labelledby="table-checkbox-3"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -365,7 +365,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-3"
+                id="table-checkbox-3"
                 scope="row"
               >
                 Pirates of the Caribbean: The Curse of the Black Pearl
@@ -399,7 +399,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-4"
+                    aria-labelledby="table-checkbox-4"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -422,7 +422,7 @@ exports[`HOOKS > useMovieListContext 1`] = `
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-4"
+                id="table-checkbox-4"
                 scope="row"
               >
                 The Grapes of Wrath
@@ -764,7 +764,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-0"
+                    aria-labelledby="table-checkbox-0"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -787,7 +787,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-0"
+                id="table-checkbox-0"
                 scope="row"
               >
                 Dances with Wolves
@@ -821,7 +821,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-1"
+                    aria-labelledby="table-checkbox-1"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -844,7 +844,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-1"
+                id="table-checkbox-1"
                 scope="row"
               >
                 Groundhog Day
@@ -878,7 +878,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-2"
+                    aria-labelledby="table-checkbox-2"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -901,7 +901,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-2"
+                id="table-checkbox-2"
                 scope="row"
               >
                 The Incredibles
@@ -935,7 +935,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-3"
+                    aria-labelledby="table-checkbox-3"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -958,7 +958,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-3"
+                id="table-checkbox-3"
                 scope="row"
               >
                 Pirates of the Caribbean: The Curse of the Black Pearl
@@ -992,7 +992,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-4"
+                    aria-labelledby="table-checkbox-4"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -1015,7 +1015,7 @@ exports[`HOOKS > получить значение movies после 3 нажа�
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-4"
+                id="table-checkbox-4"
                 scope="row"
               >
                 The Grapes of Wrath
@@ -1357,7 +1357,7 @@ exports[`HOOKS > получить начальное количество movies
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-0"
+                    aria-labelledby="table-checkbox-0"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -1380,7 +1380,7 @@ exports[`HOOKS > получить начальное количество movies
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-0"
+                id="table-checkbox-0"
                 scope="row"
               >
                 Dances with Wolves
@@ -1414,7 +1414,7 @@ exports[`HOOKS > получить начальное количество movies
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-1"
+                    aria-labelledby="table-checkbox-1"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -1437,7 +1437,7 @@ exports[`HOOKS > получить начальное количество movies
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-1"
+                id="table-checkbox-1"
                 scope="row"
               >
                 Groundhog Day
@@ -1471,7 +1471,7 @@ exports[`HOOKS > получить начальное количество movies
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-2"
+                    aria-labelledby="table-checkbox-2"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -1494,7 +1494,7 @@ exports[`HOOKS > получить начальное количество movies
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-2"
+                id="table-checkbox-2"
                 scope="row"
               >
                 The Incredibles
@@ -1528,7 +1528,7 @@ exports[`HOOKS > получить начальное количество movies
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-3"
+                    aria-labelledby="table-checkbox-3"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -1551,7 +1551,7 @@ exports[`HOOKS > получить начальное количество movies
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-3"
+                id="table-checkbox-3"
                 scope="row"
               >
                 Pirates of the Caribbean: The Curse of the Black Pearl
@@ -1585,7 +1585,7 @@ exports[`HOOKS > получить начальное количество movies
                   class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
                 >
                   <input
-                    aria-labelledby="enhanced-table-checkbox-4"
+                    aria-labelledby="table-checkbox-4"
                     class="PrivateSwitchBase-input css-1m9pwf3"
                     data-indeterminate="false"
                     type="checkbox"
@@ -1608,7 +1608,7 @@ exports[`HOOKS > получить начальное количество movies
               </td>
               <th
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeMedium css-11w94w9-MuiTableCell-root"
-                id="enhanced-table-checkbox-4"
+                id="table-checkbox-4"
                 scope="row"
               >
                 The Grapes of Wrath
