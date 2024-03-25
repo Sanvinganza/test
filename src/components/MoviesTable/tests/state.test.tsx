@@ -8,6 +8,7 @@ import { mockMoviesTable } from "./__mock__/mockMoviesTable";
 import { mockMovie1 } from "./__mock__/mockMovie";
 
 describe("проверка инициализации stateMovieTable", () => {
+  const { result } = renderHook(() => useMovieTableContext());
   beforeEach(() => {
     render(
       <MovieTableContextProvider>
@@ -17,11 +18,6 @@ describe("проверка инициализации stateMovieTable", () => {
   });
 
   test("state инициализируeтся корректно", () => {
-    const { result } = renderHook(() => useMovieTableContext());
-    // декомпозицию объекта нельзя использовать,
-    // значения не обновляются после вызова set-функций
-    // только для проверки initial state
-
     expect(result.current).toBeDefined();
 
     const { movies, order, page, selected, rowsPerPage, orderBy } =

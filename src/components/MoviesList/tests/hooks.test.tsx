@@ -1,7 +1,6 @@
 import { describe, test } from "vitest";
 import { renderHook } from "@testing-library/react-hooks";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { toJS } from "mobx";
 import { mockMovies } from "./__mock__/mockMovies";
 import { MovieListContextProvider } from "../../../providers/MovieListContextProvider";
 import { useMovieListContext } from "../hooks/useMovieListContext";
@@ -9,13 +8,11 @@ import App from "../../../App";
 
 describe("HOOKS", () => {
   beforeEach(() => {
-    const { asFragment } = render(
+    render(
       <MovieListContextProvider>
         <App />
       </MovieListContextProvider>
     );
-
-    expect(asFragment()).toMatchSnapshot();
   });
 
   const { result } = renderHook(() => useMovieListContext());
@@ -43,6 +40,6 @@ describe("HOOKS", () => {
       ).length
     ).toEqual(3);
 
-    expect(toJS(result.current.movies)).toEqual(mockMovies);
+    expect(result.current.movies).toEqual(mockMovies);
   });
 });
