@@ -4,10 +4,10 @@ import { MovieTableContextProvider } from "../../../providers/MovieTableContextP
 import App from "../../../App";
 import { renderHook } from "@testing-library/react-hooks";
 import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
-import { mockMoviesTableArray } from "./__mock__/mockMoviesTableArray";
+import { mockMoviesTable } from "./__mock__/mockMoviesTable";
 import { mockMovie1 } from "./__mock__/mockMovie";
 
-describe("stateMovieTable", () => {
+describe("проверка инициализации stateMovieTable", () => {
   beforeEach(() => {
     render(
       <MovieTableContextProvider>
@@ -16,7 +16,7 @@ describe("stateMovieTable", () => {
     );
   });
 
-  test("значения инициализируются корректно", () => {
+  test("state инициализируeтся корректно", () => {
     const { result } = renderHook(() => useMovieTableContext());
     // декомпозицию объекта нельзя использовать,
     // значения не обновляются после вызова set-функций
@@ -27,7 +27,7 @@ describe("stateMovieTable", () => {
     const { movies, order, page, selected, rowsPerPage, orderBy } =
       result.current;
 
-    expect(movies).toEqual(mockMoviesTableArray);
+    expect(movies).toEqual(mockMoviesTable);
     expect(order).toEqual("asc");
     expect(page).toEqual(0);
     expect(rowsPerPage).toEqual(5);
@@ -35,7 +35,7 @@ describe("stateMovieTable", () => {
     expect(orderBy).toEqual("rating");
   });
 
-  test("set-функции работают корректно(ОДИНОЧНЫЕ ВЫЗОВЫ)", () => {
+  test("set-функции работают корректно", () => {
     const { result } = renderHook(() => useMovieTableContext());
 
     result.current.setMovieTableItem([mockMovie1]);
@@ -52,5 +52,4 @@ describe("stateMovieTable", () => {
     expect(result.current.rowsPerPage).toEqual(10);
     expect(result.current.selected).toEqual([1, 2, 3, 5]);
   });
-  test("set-функция setMovieTableItem не аффектит другие значения state", () => {});
 });

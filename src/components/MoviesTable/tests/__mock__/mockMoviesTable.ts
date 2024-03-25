@@ -1,4 +1,4 @@
-export const mockMoviesTableArray = [
+export const mockMoviesTable = [
   {
     title: "The Exorcist",
     year: "1973",

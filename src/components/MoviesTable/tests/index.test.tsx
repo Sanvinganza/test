@@ -1,10 +1,10 @@
-import { beforeEach, describe, expect, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import { render } from "@testing-library/react";
 import { MovieTableContextProvider } from "../../../providers/MovieTableContextProvider";
 import App from "../../../App";
 
 describe("MovieTable", () => {
-  beforeEach(() => {
+  test("Snapshot", () => {
     const { asFragment } = render(
       <MovieTableContextProvider>
         <App />
@@ -13,8 +13,4 @@ describe("MovieTable", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-
-  test("", () => {});
-
-  test("", () => {});
 });
