@@ -1,11 +1,12 @@
 import { IconButton, Toolbar, Tooltip, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { EnhancedTableToolbarProps as MoviesTableToolbarProps } from "../types";
 import { useGetDeleteMovieTableItem } from "./hooks";
+import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
 
-export function MoviesTableToolbar(props: MoviesTableToolbarProps) {
-  const { numSelected } = props;
+export function MoviesTableToolbar() {
+  const { selected } = useMovieTableContext();
   const { deleteMovieTableItems } = useGetDeleteMovieTableItem();
+
   return (
     <Toolbar
       sx={{
@@ -20,7 +21,7 @@ export function MoviesTableToolbar(props: MoviesTableToolbarProps) {
         component="div">
         TOP 25 MOVIES EVER
       </Typography>
-      {!!numSelected && (
+      {!!selected.length && (
         <Tooltip title="Delete">
           <IconButton onClick={() => deleteMovieTableItems()}>
             <DeleteIcon />

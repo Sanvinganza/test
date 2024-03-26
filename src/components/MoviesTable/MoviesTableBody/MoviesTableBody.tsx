@@ -2,12 +2,12 @@ import { Checkbox, TableBody, TableCell, TableRow } from "@mui/material";
 import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
 import { observer } from "mobx-react-lite";
 import { useGetVisibleRows } from "../hooks";
-import { useGetHandleSelectRow } from "./hooks";
+import { useGetOnSelectRow } from "./hooks";
 
 export const MoviesTableBody = observer(() => {
   const { selected } = useMovieTableContext();
   const { visibleRows } = useGetVisibleRows();
-  const { handleSelectRow } = useGetHandleSelectRow();
+  const { onSelectRow } = useGetOnSelectRow();
   return (
     <TableBody>
       {visibleRows.map((row, index) => {
@@ -17,7 +17,7 @@ export const MoviesTableBody = observer(() => {
         return (
           <TableRow
             hover
-            onClick={() => handleSelectRow(row.id)}
+            onClick={() => onSelectRow(row.id)}
             role="checkbox"
             aria-checked={isItemSelected}
             tabIndex={-1}

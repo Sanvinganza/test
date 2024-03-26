@@ -1,5 +1,5 @@
 import { observable, runInAction } from "mobx";
-import { IMovieTableItem, Order } from "../components/MoviesTable/types";
+import { IMovieTableItem, Order } from "./types";
 
 const data = [
   {

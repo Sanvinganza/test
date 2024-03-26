@@ -5,6 +5,7 @@ import { IMovieTableItem } from "../types";
 export const useGetDeleteMovieTableItem = () => {
   const { movies, setMovieTableItem, selected, setSelected } =
     useMovieTableContext();
+
   const deleteMovieTableItems = () => {
     const idArray = [...selected];
     while (idArray.length) {
@@ -17,6 +18,7 @@ export const useGetDeleteMovieTableItem = () => {
     }
     runInAction(() => setSelected([]));
   };
+
   return {
     deleteMovieTableItems,
   };

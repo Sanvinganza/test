@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useLocalObservable } from "mobx-react-lite";
-import { movieTableState } from "../states/stateMovieTable";
+import { movieTableState } from "../components/MoviesTable/stateMovieTable";
 import { MovieTableContext } from "../components/MoviesList/hooks/useMovieTableContext";
 
 export const MovieTableContextProvider: FC<any> = ({ children }) => {

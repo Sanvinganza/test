@@ -1,4 +1,3 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
 import Table from "@mui/material/Table";
 import TableContainer from "@mui/material/TableContainer";
@@ -9,32 +8,17 @@ import { MoviesTableToolbar } from "./MoviesTableToolbar/MoviesTableToolbar";
 import { MoviesTableHead } from "./MoviesTableHead/MoviesTableHead";
 import { MoviesTableBody } from "./MoviesTableBody/MoviesTableBody";
 import { observer } from "mobx-react-lite";
+import { useGetOnPageChange, useGetOnRowsPerPageChange } from "./hooks";
 
 export const TableMovies = observer(() => {
-  const { movies, page, rowsPerPage, selected, setPage, setRowsPerPage } =
-    useMovieTableContext();
-  const onRowsPerPageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    switch (+event.target.value) {
-      case 5:
-        setRowsPerPage(5);
-        break;
-      case 10:
-        setRowsPerPage(10);
-        break;
-      case 25:
-        setRowsPerPage(25);
-        break;
-    }
+  const { movies, page, rowsPerPage } = useMovieTableContext();
+  const { onRowsPerPageChange } = useGetOnRowsPerPageChange();
+  const { onPageChange } = useGetOnPageChange();
 
-    setPage(0);
-  };
-  const onPageChange = (_: unknown, newPage: number) => {
-    setPage(newPage);
-  };
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <MoviesTableToolbar numSelected={selected.length} />
+        <MoviesTableToolbar />
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}

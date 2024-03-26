@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { movieListState } from "../../../states/stateMovieList";
+import { movieListState } from "../stateMovieList";
 
 export const MovieListContext = createContext(movieListState);
 

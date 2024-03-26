@@ -1,10 +1,10 @@
 import { runInAction } from "mobx";
 import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
 
-export const useGetHandleSelectRow = () => {
+export const useGetOnSelectRow = () => {
   const { selected, setSelected } = useMovieTableContext();
 
-  const handleSelectRow = (id: number) => {
+  const onSelectRow = (id: number) => {
     const selectedIndex = selected.indexOf(id);
     let newSelected: number[] = [];
 
@@ -25,6 +25,6 @@ export const useGetHandleSelectRow = () => {
     });
   };
   return {
-    handleSelectRow,
+    onSelectRow,
   };
 };
