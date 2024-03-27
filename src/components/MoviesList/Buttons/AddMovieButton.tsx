@@ -5,7 +5,6 @@ export const AddMovieButton = () => {
   const { movies, setMovies } = useMovieListContext();
   const newId = useRef<number>(6);
   const handleOnClick = () => {
-    console.log("click");
     setMovies([
       ...movies,
       {

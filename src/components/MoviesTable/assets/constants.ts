@@ -1,12 +1,41 @@
-export const mockMoviesTable = [
+import { HeadCell, IMovieTableItem } from "../types";
+
+export const headCells: readonly HeadCell[] = [
   {
-    title: "Rush",
-    year: "2013",
-    timeline: "2h 3m",
-    rating: "8.1 (511K)",
+    id: "title",
+    numeric: false,
+    disablePadding: true,
+    label: "TITLE",
+  },
+  {
+    id: "rating",
+    numeric: true,
+    disablePadding: false,
+    label: "RATING",
+  },
+  {
+    id: "timeline",
+    numeric: true,
+    disablePadding: false,
+    label: "TIMELINE",
+  },
+  {
+    id: "year",
+    numeric: true,
+    disablePadding: false,
+    label: "YEAR",
+  },
+];
+
+export const movieTableItemsData: IMovieTableItem[] = [
+  {
+    title: "The Exorcist",
+    year: "1973",
+    timeline: "2h 2m",
+    rating: "8.1 (452K)",
     image:
-      "https://m.media-amazon.com/images/M/MV5BOWEwODJmZDItYTNmZC00OGM4LThlNDktOTQzZjIzMGQxODA4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@.300_.jpg",
-    id: 2,
+      "https://m.media-amazon.com/images/M/MV5BYWFlZGY2NDktY2ZjOS00ZWNkLTg0ZDAtZDY4MTM1ODU4ZjljXkEyXkFqcGdeQXVyMjUzOTY1NTc@.300_.jpg",
+    id: 0,
   },
   {
     title: "Pirates of the Caribbean: The Curse of the Black Pearl",
@@ -18,22 +47,13 @@ export const mockMoviesTable = [
     id: 1,
   },
   {
-    title: "The Exorcist",
-    year: "1973",
-    timeline: "2h 2m",
-    rating: "8.1 (452K)",
+    title: "Rush",
+    year: "2013",
+    timeline: "2h 3m",
+    rating: "8.1 (511K)",
     image:
-      "https://m.media-amazon.com/images/M/MV5BYWFlZGY2NDktY2ZjOS00ZWNkLTg0ZDAtZDY4MTM1ODU4ZjljXkEyXkFqcGdeQXVyMjUzOTY1NTc@.300_.jpg",
-    id: 0,
-  },
-  {
-    title: "The Wizard of Oz",
-    year: "1939",
-    timeline: "1h 42m",
-    rating: "8.1 (427K)",
-    image:
-      "https://m.media-amazon.com/images/M/MV5BY2NjNDU1ZjctN2VhZi00Nzc5LTljNmItMTZiOTg1ODkwYjgwXkEyXkFqcGdeQXVyNTkxMzEwMzU@.300_.jpg",
-    id: 5,
+      "https://m.media-amazon.com/images/M/MV5BOWEwODJmZDItYTNmZC00OGM4LThlNDktOTQzZjIzMGQxODA4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@.300_.jpg",
+    id: 2,
   },
   {
     title: "Network",
@@ -52,6 +72,15 @@ export const mockMoviesTable = [
     image:
       "https://m.media-amazon.com/images/M/MV5BODJmY2Y2OGQtMDg2My00N2Q3LWJmZTUtYTc2ODBjZDVlNDlhXkEyXkFqcGdeQXVyMTQxNzMzNDI@.300_.jpg",
     id: 4,
+  },
+  {
+    title: "The Wizard of Oz",
+    year: "1939",
+    timeline: "1h 42m",
+    rating: "8.1 (427K)",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BY2NjNDU1ZjctN2VhZi00Nzc5LTljNmItMTZiOTg1ODkwYjgwXkEyXkFqcGdeQXVyNTkxMzEwMzU@.300_.jpg",
+    id: 5,
   },
   {
     title: "The Incredibles",
@@ -189,6 +218,15 @@ export const mockMoviesTable = [
     id: 20,
   },
   {
+    title: "It Happened One Night",
+    year: "1934",
+    timeline: "1h 45m",
+    rating: "8.1 (112K)",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMDg5MmEwZjItODllOS00Yjc4LTk3NzItZWY4ODFlODQzZjJlXkEyXkFqcGdeQXVyNjc5NjEzNA@@.300_.jpg",
+    id: 21,
+  },
+  {
     title: "Dances with Wolves",
     year: "1990",
     timeline: "3h 1m",
@@ -205,15 +243,6 @@ export const mockMoviesTable = [
     image:
       "https://m.media-amazon.com/images/M/MV5BYTQ4MjA4NmYtYjRhNi00MTEwLTg0NjgtNjk3ODJlZGU4NjRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@.300_.jpg",
     id: 23,
-  },
-  {
-    title: "It Happened One Night",
-    year: "1934",
-    timeline: "1h 45m",
-    rating: "8.1 (112K)",
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMDg5MmEwZjItODllOS00Yjc4LTk3NzItZWY4ODFlODQzZjJlXkEyXkFqcGdeQXVyNjc5NjEzNA@@.300_.jpg",
-    id: 21,
   },
   {
     title: "Drishyam",

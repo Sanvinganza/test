@@ -10,5 +10,5 @@ export const mockMovie2 = {
   title: "TEST 2",
   rating: "8.2(352K)",
   timeline: "1h 3m",
-  year: "1989",
+  year: "1999",
 };

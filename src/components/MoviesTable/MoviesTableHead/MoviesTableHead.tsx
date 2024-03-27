@@ -5,37 +5,10 @@ import {
   TableRow,
   TableSortLabel,
 } from "@mui/material";
-import { HeadCell } from "../types";
-import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
 import { observer } from "mobx-react-lite";
 import { useGetOnSelectAllClick, useGetOnSortHandle } from "./hooks";
-
-const headCells: readonly HeadCell[] = [
-  {
-    id: "title",
-    numeric: false,
-    disablePadding: true,
-    label: "TITLE",
-  },
-  {
-    id: "rating",
-    numeric: true,
-    disablePadding: false,
-    label: "RATING",
-  },
-  {
-    id: "timeline",
-    numeric: true,
-    disablePadding: false,
-    label: "TIMELINE",
-  },
-  {
-    id: "year",
-    numeric: true,
-    disablePadding: false,
-    label: "YEAR",
-  },
-];
+import { headCells } from "../assets/constants";
+import { useMovieTableContext } from "../hooks/useMovieTableContext";
 
 export const MoviesTableHead = observer(() => {
   const { movies, order, orderBy, selected } = useMovieTableContext();

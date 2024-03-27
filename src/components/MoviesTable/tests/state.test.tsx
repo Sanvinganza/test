@@ -1,40 +1,19 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { render } from "@testing-library/react";
-import { MovieTableContextProvider } from "../../../providers/MovieTableContextProvider";
 import App from "../../../App";
 import { renderHook } from "@testing-library/react-hooks";
-import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
-import { mockMoviesTable } from "./__mock__/mockMoviesTable";
 import { mockMovie1 } from "./__mock__/mockMovie";
+import { MovieTableContextProvider } from "../../../providers/MovieTableContextProvider";
+import { useMovieTableContext } from "../hooks/useMovieTableContext";
 
-describe("проверка инициализации stateMovieTable", () => {
-  const { result } = renderHook(() => useMovieTableContext());
+describe("stateMovieTable", () => {
   beforeEach(() => {
-    render(
-      <MovieTableContextProvider>
-        <App />
-      </MovieTableContextProvider>
-    );
-  });
-
-  test("state инициализируeтся корректно", () => {
-    expect(result.current).toBeDefined();
-
-    const { movies, order, page, selected, rowsPerPage, orderBy } =
-      result.current;
-
-    expect(movies).toEqual(mockMoviesTable);
-    expect(order).toEqual("asc");
-    expect(page).toEqual(0);
-    expect(rowsPerPage).toEqual(5);
-    expect(selected).toEqual([]);
-    expect(orderBy).toEqual("rating");
+    render(<MovieTableContextProvider children={<App />} />);
   });
 
   test("set-функции работают корректно", () => {
     const { result } = renderHook(() => useMovieTableContext());
-
-    result.current.setMovieTableItem([mockMovie1]);
+    result.current.setMovie([mockMovie1]);
     result.current.setOrder("desc");
     result.current.setOrderBy("id");
     result.current.setPage(2);

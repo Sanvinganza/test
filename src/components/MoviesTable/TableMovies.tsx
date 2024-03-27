@@ -3,12 +3,13 @@ import Table from "@mui/material/Table";
 import TableContainer from "@mui/material/TableContainer";
 import TablePagination from "@mui/material/TablePagination";
 import Paper from "@mui/material/Paper";
-import { useMovieTableContext } from "../MoviesList/hooks/useMovieTableContext";
 import { MoviesTableToolbar } from "./MoviesTableToolbar/MoviesTableToolbar";
 import { MoviesTableHead } from "./MoviesTableHead/MoviesTableHead";
 import { MoviesTableBody } from "./MoviesTableBody/MoviesTableBody";
 import { observer } from "mobx-react-lite";
-import { useGetOnPageChange, useGetOnRowsPerPageChange } from "./hooks";
+import { useMovieTableContext } from "./hooks/useMovieTableContext";
+import { useGetOnRowsPerPageChange } from "./hooks/useGetOnRowsPerPageChange";
+import { useGetOnPageChange } from "./hooks/useGetOnPageChange";
 
 export const TableMovies = observer(() => {
   const { movies, page, rowsPerPage } = useMovieTableContext();

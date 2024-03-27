@@ -1,21 +1,21 @@
 import { observable, runInAction } from "mobx";
-import { IMovieTableItem, Order } from "./types";
-import { movieTableItemsData } from "./assets/constants";
+import { IMovieTableItem, Order } from "../../../types";
+import { mockMoviesTable } from "../../../tests/__mock__/mockMoviesTable";
 
-export const movieTableState = {
-  movies: observable.array<IMovieTableItem>(movieTableItemsData),
-  setMovie(newMovies: IMovieTableItem[]) {
+export const mockMovieTableState = {
+  movies: observable.array<IMovieTableItem>(mockMoviesTable),
+  setMovie(movies: IMovieTableItem[]) {
     runInAction(() => {
-      this.movies.replace(newMovies);
+      this.movies = observable.array<IMovieTableItem>(movies);
     });
   },
-  page: 0,
+  page: 1,
   setPage(newPage: number) {
     runInAction(() => {
       this.page = newPage;
     });
   },
-  rowsPerPage: 5 as 5 | 10 | 25,
+  rowsPerPage: 10 as 5 | 10 | 25,
   setRowsPerPage(newRowsPerPage: 5 | 10 | 25) {
     runInAction(() => {
       this.rowsPerPage = newRowsPerPage;
@@ -27,13 +27,13 @@ export const movieTableState = {
       this.orderBy = newOrderBy;
     });
   },
-  order: "asc" as Order,
+  order: "desc" as Order,
   setOrder(newOrder: Order) {
     runInAction(() => {
       this.order = newOrder;
     });
   },
-  selected: [] as number[],
+  selected: [3, 5, 7] as number[],
   setSelected(newSelected: number[]) {
     runInAction(() => {
       this.selected = newSelected;

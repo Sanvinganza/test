@@ -84,12 +84,11 @@ exports[`MovieTable > Snapshot 1`] = `
                 </span>
               </th>
               <th
-                aria-sort="ascending"
                 class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-1azl6jz-MuiTableCell-root"
                 scope="col"
               >
                 <span
-                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                  class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
                   role="button"
                   tabindex="0"
                 >
@@ -197,22 +196,22 @@ exports[`MovieTable > Snapshot 1`] = `
                 id="table-checkbox-0"
                 scope="row"
               >
-                Dances with Wolves
+                The Exorcist
               </th>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                8.0 (289K)
+                8.1 (452K)
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                3h 1m
+                2h 2m
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                1990
+                1973
               </td>
             </tr>
             <tr
@@ -254,22 +253,22 @@ exports[`MovieTable > Snapshot 1`] = `
                 id="table-checkbox-1"
                 scope="row"
               >
-                Groundhog Day
+                Pirates of the Caribbean: The Curse of the Black Pearl
               </th>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                8.0 (682K)
+                8.1 (1.2M)
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                1h 41m
+                2h 23m
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                1993
+                2003
               </td>
             </tr>
             <tr
@@ -311,22 +310,22 @@ exports[`MovieTable > Snapshot 1`] = `
                 id="table-checkbox-2"
                 scope="row"
               >
-                The Incredibles
+                Rush
               </th>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                8.0 (804K)
+                8.1 (511K)
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                1h 55m
+                2h 3m
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                2004
+                2013
               </td>
             </tr>
             <tr
@@ -368,22 +367,22 @@ exports[`MovieTable > Snapshot 1`] = `
                 id="table-checkbox-3"
                 scope="row"
               >
-                Pirates of the Caribbean: The Curse of the Black Pearl
+                Network
               </th>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                8.1 (1.2M)
+                8.1 (170K)
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                2h 23m
+                2h 1m
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                2003
+                1976
               </td>
             </tr>
             <tr
@@ -425,22 +424,22 @@ exports[`MovieTable > Snapshot 1`] = `
                 id="table-checkbox-4"
                 scope="row"
               >
-                The Grapes of Wrath
+                Stand by Me
               </th>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                8.1 (100K)
+                8.1 (439K)
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                2h 9m
+                1h 29m
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-177gid-MuiTableCell-root"
               >
-                1940
+                1986
               </td>
             </tr>
           </tbody>

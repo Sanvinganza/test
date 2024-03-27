@@ -1,17 +1,15 @@
-import { runInAction } from "mobx";
-import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
 import { IMovieTableItem } from "../types";
+import { useMovieTableContext } from "../hooks/useMovieTableContext";
 
 export const useGetOnSortHandle = () => {
   const { order, orderBy, setOrder, setOrderBy } = useMovieTableContext();
+
   const onSortHandle = (
     _: React.MouseEvent<unknown>,
     property: keyof IMovieTableItem
   ) => {
-    runInAction(() => {
-      setOrder(orderBy === property && order === "asc" ? "desc" : "asc");
-      setOrderBy(property);
-    });
+    setOrder(orderBy === property && order === "asc" ? "desc" : "asc");
+    setOrderBy(property);
   };
 
   return {
@@ -24,16 +22,13 @@ export const useGetOnSelectAllClick = () => {
 
   const onSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelected = movies.map((n) => n.id);
-      runInAction(() => {
-        setSelected(newSelected);
-      });
+      setSelected(movies.map((n) => n.id));
       return;
     }
-    runInAction(() => {
-      setSelected([]);
-    });
+
+    setSelected([]);
   };
+
   return {
     onSelectAllClick,
   };

@@ -1,11 +1,12 @@
 import { IconButton, Toolbar, Tooltip, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useGetDeleteMovieTableItem } from "./hooks";
-import { useMovieTableContext } from "../../MoviesList/hooks/useMovieTableContext";
+import { observer } from "mobx-react-lite";
+import { useMovieTableContext } from "../hooks/useMovieTableContext";
 
-export function MoviesTableToolbar() {
+export const MoviesTableToolbar = observer(() => {
   const { selected } = useMovieTableContext();
-  const { deleteMovieTableItems } = useGetDeleteMovieTableItem();
+  const { onDeleteMovieTableItems } = useGetDeleteMovieTableItem();
 
   return (
     <Toolbar
@@ -23,11 +24,11 @@ export function MoviesTableToolbar() {
       </Typography>
       {!!selected.length && (
         <Tooltip title="Delete">
-          <IconButton onClick={() => deleteMovieTableItems()}>
+          <IconButton onClick={() => onDeleteMovieTableItems()}>
             <DeleteIcon />
           </IconButton>
         </Tooltip>
       )}
     </Toolbar>
   );
-}
+});
