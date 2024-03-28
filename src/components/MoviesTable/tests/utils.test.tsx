@@ -1,7 +1,7 @@
 import { descendingComparator, stableSort } from "../utils";
 import { mockMovie1, mockMovie2 } from "./__mock__/mockMovie";
 
-describe("Utils", () => {
+describe("Utils TableMovies", () => {
   test("descendingComparator работает корректно", () => {
     const result1 = descendingComparator(mockMovie1, mockMovie2, "id");
     const result2 = descendingComparator(mockMovie1, mockMovie2, "rating");
