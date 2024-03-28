@@ -1,4 +1,4 @@
-import { onSelectRowHookUtils } from "./utils";
+import { onSelectRowHookUtils } from "../utils";
 
 describe("Utils MoviesTableBody", () => {
   test("onSelectRowHookUtils", () => {
