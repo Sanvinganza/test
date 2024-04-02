@@ -18,6 +18,7 @@ export const MoviesTableHead = observer(
     movies,
     setOrder,
     setOrderBy,
+    setSelected,
   }: MoviesTableHeadProps) => {
     const { onSortHandle } = useGetOnSortHandle(
       order,
@@ -25,7 +26,7 @@ export const MoviesTableHead = observer(
       setOrder,
       setOrderBy
     );
-    const { onSelectAllClick } = useGetOnSelectAllClick();
+    const { onSelectAllClick } = useGetOnSelectAllClick(setSelected, movies);
 
     return (
       <TableHead>

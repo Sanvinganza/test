@@ -1,23 +1,25 @@
 import { observer } from "mobx-react-lite";
-import { IMovieListItem } from "./types";
-import { useMovieListContext } from "./hooks/useMovieListContext";
 import { AddMovieButton } from "./Buttons/AddMovieButton";
 import { FilterMovieButton } from "./Buttons/FilterMovieButton";
+import { useMovieTableContext } from "../MoviesTable/hooks/useMovieTableContext";
+import { IMovie } from "../MoviesTable/types";
 
 export const Movies = observer(() => {
-  const { movies } = useMovieListContext();
+  const { movies, selected } = useMovieTableContext();
 
   return (
     <>
       <h1>Films :</h1>
       <br />
       <ul>
-        {movies.map((movie: IMovieListItem, i: number) => (
-          <ol key={i}>
-            <h2>{movie.title}</h2>
-            <h4>{movie.discribe}</h4>
-          </ol>
-        ))}
+        {movies.map(
+          (movie: IMovie, i: number) =>
+            selected.includes(i) && (
+              <ol key={i}>
+                <h2>{movie.title}</h2>
+              </ol>
+            )
+        )}
       </ul>
       <AddMovieButton />
       <FilterMovieButton />

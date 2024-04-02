@@ -52,6 +52,7 @@ export const TableMovies = observer(() => {
             <MoviesTableHead
               movies={movies}
               selected={selected}
+              setSelected={setSelected}
               order={order}
               orderBy={orderBy}
               setOrder={setOrder}
@@ -66,6 +67,7 @@ export const TableMovies = observer(() => {
               selected={selected}
               setOrder={setOrder}
               setOrderBy={setOrderBy}
+              setSelected={setSelected}
             />
           </Table>
         </TableContainer>

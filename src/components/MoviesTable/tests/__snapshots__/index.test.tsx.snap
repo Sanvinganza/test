@@ -553,32 +553,7 @@ exports[`MovieTable > Snapshot 1`] = `
     Films :
   </h1>
   <br />
-  <ul>
-    <ol>
-      <h2>
-        DR.Strange
-      </h2>
-      <h4>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/
-      </h4>
-    </ol>
-    <ol>
-      <h2>
-        Harry Potter
-      </h2>
-      <h4>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/
-      </h4>
-    </ol>
-    <ol>
-      <h2>
-        Star Wars
-      </h2>
-      <h4>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, magni/
-      </h4>
-    </ol>
-  </ul>
+  <ul />
   <button
     data-testid="button-change-id"
   >

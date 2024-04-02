@@ -1,4 +1,4 @@
-import { IMovie, Order, OrderBy } from "../types";
+import { IMovie, Order, OrderBy, Selected } from "../types";
 import { useMovieTableContext } from "../hooks/useMovieTableContext";
 
 export const useGetOnSortHandle = (
@@ -20,12 +20,13 @@ export const useGetOnSortHandle = (
   };
 };
 
-export const useGetOnSelectAllClick = () => {
-  const { movies, setSelected } = useMovieTableContext();
-
+export const useGetOnSelectAllClick = (
+  setSelected: (selected: Selected) => void,
+  movies: IMovie[]
+) => {
   const onSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      setSelected(movies.map((n) => n.id));
+      setSelected(movies.map((movie) => movie.id));
       return;
     }
 

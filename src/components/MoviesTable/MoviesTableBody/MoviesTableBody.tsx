@@ -12,6 +12,7 @@ export const MoviesTableBody = observer(
     orderBy,
     page,
     rowsPerPage,
+    setSelected,
   }: MoviesTableBodyProps) => {
     const { visibleRows } = useGetVisibleRows(
       movies,
@@ -20,7 +21,7 @@ export const MoviesTableBody = observer(
       page,
       rowsPerPage
     );
-    const { onSelectRow } = useGetOnSelectRow();
+    const { onSelectRow } = useGetOnSelectRow(selected, setSelected);
 
     return (
       <TableBody>

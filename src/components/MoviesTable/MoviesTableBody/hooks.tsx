@@ -1,9 +1,10 @@
-import { useMovieTableContext } from "../hooks/useMovieTableContext";
+import { Selected } from "../types";
 import { onSelectRowHookUtils } from "./utils";
 
-export const useGetOnSelectRow = () => {
-  const { selected, setSelected } = useMovieTableContext();
-
+export const useGetOnSelectRow = (
+  selected: Selected,
+  setSelected: (selected: Selected) => void
+) => {
   const onSelectRow = (id: number) => {
     setSelected(onSelectRowHookUtils(selected, id));
   };

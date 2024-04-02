@@ -28,6 +28,7 @@ export interface MoviesTableHeadProps {
   setOrderBy: (orderBy: OrderBy) => void;
   setOrder: (order: Order) => void;
   selected: Selected;
+  setSelected: (selected: Selected) => void;
   movies: IMovie[];
 }
 
@@ -42,6 +43,7 @@ export interface MoviesTableToolbarProps {
 
 export interface MoviesTableBodyProps {
   selected: Selected;
+  setSelected: (selected: Selected) => void;
   order: Order;
   orderBy: keyof IMovie;
   setOrderBy: (orderBy: OrderBy) => void;
