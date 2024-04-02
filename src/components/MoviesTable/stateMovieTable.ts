@@ -33,7 +33,7 @@ export const movieTableState = {
       this.order = newOrder;
     });
   },
-  selected: [] as Selected,
+  selected: [1] as Selected,
   setSelected(newSelected: Selected) {
     runInAction(() => {
       this.selected = newSelected;

@@ -1,11 +1,11 @@
+import { MoviesList } from "./components/MoviesList/MoviesList";
 import { TableMovies } from "./components/MoviesTable";
-import { MovieList } from "./components/MoviesList";
 
 const App = () => {
   return (
     <>
       <TableMovies />
-      <MovieList />
+      <MoviesList />
     </>
   );
 };
