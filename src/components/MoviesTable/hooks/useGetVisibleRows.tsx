@@ -1,8 +1,6 @@
 import { stableSort } from "../utils";
-import { useMovieTableContext } from "./useMovieTableContext";
 
-export function useGetVisibleRows() {
-  const { movies, order, orderBy, page, rowsPerPage } = useMovieTableContext();
+export function useGetVisibleRows(movies, order, orderBy, page, rowsPerPage) {
   return {
     visibleRows: stableSort(movies, order, orderBy).slice(
       page * rowsPerPage,

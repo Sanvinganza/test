@@ -13,7 +13,7 @@ describe("stateMovieTable", () => {
 
   test("set-функции работают корректно", () => {
     const { result } = renderHook(() => useMovieTableContext());
-    result.current.setMovie([mockMovie1]);
+    result.current.setMovies([mockMovie1]);
     result.current.setOrder("desc");
     result.current.setOrderBy("id");
     result.current.setPage(2);

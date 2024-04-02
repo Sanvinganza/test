@@ -1,4 +1,4 @@
-import { IMovieTableItem, Order } from "./types";
+import { IMovie, Order, OrderBy } from "./types";
 
 export function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -10,24 +10,26 @@ export function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   return 0;
 }
 
-export function getComparator<Key extends keyof IMovieTableItem>(
+export function getComparator(
   order: Order,
-  orderBy: Key
+  orderBy: OrderBy
 ): (
-  a: { [key in Key]: number | string },
-  b: { [key in Key]: number | string }
+  a: { [key in OrderBy]: number | string },
+  b: { [key in OrderBy]: number | string }
 ) => number {
   return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-export function stableSort<T extends IMovieTableItem>(
-  array: T[],
+export function stableSort(
+  array: IMovie[],
   order: Order,
-  orderBy: keyof IMovieTableItem
+  orderBy: keyof IMovie
 ) {
-  const stabilizedThis = array.map((el, index) => [el, index] as [T, number]);
+  const stabilizedThis = array.map(
+    (el, index) => [el, index] as [IMovie, number]
+  );
   const comparator = getComparator(order, orderBy);
 
   stabilizedThis.sort((a, b) => {

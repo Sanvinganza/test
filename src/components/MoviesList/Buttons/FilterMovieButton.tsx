@@ -3,12 +3,12 @@ import { IField, useFilterByField } from "../hooks/useFilterByField";
 import { useMovieListContext } from "../hooks/useMovieListContext";
 
 export const FilterMovieButton = () => {
-  const { movies, setMovies } = useMovieListContext();
+  const { movies, setMoviess } = useMovieListContext();
 
   const field = useRef<IField>("id");
 
   const handleOnClick = () => {
-    useFilterByField(field.current, movies, setMovies);
+    useFilterByField(field.current, movies, setMoviess);
 
     if (field.current === "id") {
       field.current = "discribe";

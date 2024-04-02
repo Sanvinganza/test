@@ -32,7 +32,7 @@ describe("HOOKS", () => {
   });
 
   test("useMovieListContext", () => {
-    result.current.setMovies(mockMovies);
+    result.current.setMoviess(mockMovies);
 
     expect(
       screen.getAllByText(

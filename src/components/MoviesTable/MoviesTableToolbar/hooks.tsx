@@ -1,12 +1,15 @@
 import { action } from "mobx";
-import { useMovieTableContext } from "../hooks/useMovieTableContext";
 import { deleteMovieTableHookUtils } from "./utils";
+import { IMovie } from "../types";
 
-export const useGetDeleteMovieTableItem = () => {
-  const { movies, setMovie, selected, setSelected } = useMovieTableContext();
-
+export const useGetDeleteMovieTableItem = (
+  movies: IMovie[],
+  setMovies: (movies: IMovie[]) => void,
+  selected: number[],
+  setSelected: (selected: number[]) => void
+) => {
   const onDeleteMovieTableItems = action("onDeleteMovieTableItems", () => {
-    setMovie(deleteMovieTableHookUtils(selected, movies));
+    setMovies(deleteMovieTableHookUtils(selected, movies));
     setSelected([]);
   });
 

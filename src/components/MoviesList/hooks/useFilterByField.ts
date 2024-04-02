@@ -8,16 +8,16 @@ export const useFilterByField = action(
   (
     field: IField,
     movies: IMovieListItem[],
-    setMovies: (movies: IMovieListItem[]) => void
+    setMoviess: (movies: IMovieListItem[]) => void
   ) => {
     switch (field) {
       case "id":
-        setMovies(
+        setMoviess(
           movies.sort((a: IMovieListItem, b: IMovieListItem) => a.id - b.id)
         );
         break;
       case "title":
-        setMovies(
+        setMoviess(
           movies.sort((a: IMovieListItem, b: IMovieListItem) => {
             const first = a.title.toUpperCase();
             const second = b.title.toUpperCase();
@@ -30,7 +30,7 @@ export const useFilterByField = action(
         );
         break;
       case "discribe":
-        setMovies(
+        setMoviess(
           movies.sort((a: IMovieListItem, b: IMovieListItem) => {
             const first = a.discribe.toUpperCase();
             const second = b.discribe.toUpperCase();

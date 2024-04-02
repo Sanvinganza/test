@@ -1,12 +1,15 @@
-import { IMovieTableItem } from "../types";
+import { IMovie, Order, OrderBy } from "../types";
 import { useMovieTableContext } from "../hooks/useMovieTableContext";
 
-export const useGetOnSortHandle = () => {
-  const { order, orderBy, setOrder, setOrderBy } = useMovieTableContext();
-
+export const useGetOnSortHandle = (
+  order: Order,
+  orderBy: OrderBy,
+  setOrder: (order: Order) => void,
+  setOrderBy: (orderBy: OrderBy) => void
+) => {
   const onSortHandle = (
     _: React.MouseEvent<unknown>,
-    property: keyof IMovieTableItem
+    property: keyof IMovie
   ) => {
     setOrder(orderBy === property && order === "asc" ? "desc" : "asc");
     setOrderBy(property);

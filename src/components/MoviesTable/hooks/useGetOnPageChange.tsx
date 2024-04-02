@@ -1,8 +1,4 @@
-import { useMovieTableContext } from "./useMovieTableContext";
-
-export function useGetOnPageChange() {
-  const { setPage } = useMovieTableContext();
-
+export function useGetOnPageChange(setPage: (page: number) => void) {
   const onPageChange = (_: unknown, newPage: number) => {
     setPage(newPage);
   };

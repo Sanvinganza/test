@@ -6,31 +6,71 @@ import Paper from "@mui/material/Paper";
 import { MoviesTableToolbar } from "./MoviesTableToolbar/MoviesTableToolbar";
 import { MoviesTableHead } from "./MoviesTableHead/MoviesTableHead";
 import { MoviesTableBody } from "./MoviesTableBody/MoviesTableBody";
-import { observer } from "mobx-react-lite";
-import { useMovieTableContext } from "./hooks/useMovieTableContext";
+import { observer, useLocalObservable } from "mobx-react-lite";
 import { useGetOnRowsPerPageChange } from "./hooks/useGetOnRowsPerPageChange";
 import { useGetOnPageChange } from "./hooks/useGetOnPageChange";
+import { movieTableState } from "./stateMovieTable";
+import { rowsPerPageOptions } from "./constants";
 
 export const TableMovies = observer(() => {
-  const { movies, page, rowsPerPage } = useMovieTableContext();
-  const { onRowsPerPageChange } = useGetOnRowsPerPageChange();
-  const { onPageChange } = useGetOnPageChange();
+  const {
+    movies,
+    page,
+    rowsPerPage,
+    setPage,
+    setRowsPerPage,
+    selected,
+    order,
+    setMovies,
+    orderBy,
+    setOrderBy,
+    setOrder,
+    setSelected,
+  } = useLocalObservable(() => movieTableState);
+
+  const { onRowsPerPageChange } = useGetOnRowsPerPageChange(
+    setRowsPerPage,
+    setPage
+  );
+
+  const { onPageChange } = useGetOnPageChange(setPage);
 
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <MoviesTableToolbar />
+        <MoviesTableToolbar
+          selected={selected}
+          movies={movies}
+          setMovies={setMovies}
+          setSelected={setSelected}
+        />
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
             aria-labelledby="tableTitle"
             size={"medium"}>
-            <MoviesTableHead />
-            <MoviesTableBody />
+            <MoviesTableHead
+              movies={movies}
+              selected={selected}
+              order={order}
+              orderBy={orderBy}
+              setOrder={setOrder}
+              setOrderBy={setOrderBy}
+            />
+            <MoviesTableBody
+              movies={movies}
+              order={order}
+              orderBy={orderBy}
+              page={page}
+              rowsPerPage={rowsPerPage}
+              selected={selected}
+              setOrder={setOrder}
+              setOrderBy={setOrderBy}
+            />
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={rowsPerPageOptions}
           component="div"
           count={movies.length}
           rowsPerPage={rowsPerPage}

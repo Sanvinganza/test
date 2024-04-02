@@ -24,7 +24,7 @@ const initialData = [
 
 export const movieListState = {
   movies: observable.array<IMovieListItem>(initialData),
-  setMovies(movies: IMovieListItem[]) {
+  setMoviess(movies: IMovieListItem[]) {
     runInAction(() => {
       this.movies = observable.array<IMovieListItem>(movies);
     });
