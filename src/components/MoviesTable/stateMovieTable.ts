@@ -1,40 +1,40 @@
 import { observable, runInAction } from "mobx";
-import { IMovie, Order, Selected, rowsPerPageOptions } from "./types";
+import { MovieTableState } from "./types";
 import { movieTableItemsData } from "./assets/constants";
 
-export const movieTableState = {
-  movies: observable.array<IMovie>(movieTableItemsData),
-  setMovies(newMovies: IMovie[]) {
+export const movieTableState: MovieTableState = {
+  movies: observable.array(movieTableItemsData),
+  setMovies(newMovies) {
     runInAction(() => {
       this.movies.replace(newMovies);
     });
   },
   page: 0,
-  setPage(newPage: number) {
+  setPage(newPage) {
     runInAction(() => {
       this.page = newPage;
     });
   },
-  rowsPerPage: 5 as rowsPerPageOptions,
-  setRowsPerPage(newRowsPerPage: rowsPerPageOptions) {
+  rowsPerPage: 10,
+  setRowsPerPage(newRowsPerPage) {
     runInAction(() => {
       this.rowsPerPage = newRowsPerPage;
     });
   },
-  orderBy: "id" as keyof IMovie,
-  setOrderBy(newOrderBy: keyof IMovie) {
+  orderBy: "id",
+  setOrderBy(newOrderBy) {
     runInAction(() => {
       this.orderBy = newOrderBy;
     });
   },
-  order: "asc" as Order,
-  setOrder(newOrder: Order) {
+  order: "asc",
+  setOrder(newOrder) {
     runInAction(() => {
       this.order = newOrder;
     });
   },
-  selected: [1] as Selected,
-  setSelected(newSelected: Selected) {
+  selected: [],
+  setSelected(newSelected) {
     runInAction(() => {
       this.selected = newSelected;
     });

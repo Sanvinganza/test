@@ -1,4 +1,4 @@
-import { HeadCell, IMovie } from "../types";
+import { HeadCell, Movie } from "../types";
 
 export const headCells: readonly HeadCell[] = [
   {
@@ -27,7 +27,7 @@ export const headCells: readonly HeadCell[] = [
   },
 ];
 
-export const movieTableItemsData: IMovie[] = [
+export const movieTableItemsData: Movie[] = [
   {
     title: "The Exorcist",
     year: "1973",

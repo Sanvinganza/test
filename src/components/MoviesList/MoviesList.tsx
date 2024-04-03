@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useMovieTableContext } from "../MoviesTable/hooks/useMovieTableContext";
-import { IMovie } from "../MoviesTable/types";
+import { Movie } from "../MoviesTable/types";
 
 export const MoviesList = observer(() => {
   const { movies } = useMovieTableContext();
@@ -8,7 +8,7 @@ export const MoviesList = observer(() => {
   return (
     <>
       <h1>ALL Movies:</h1>
-      {movies.map((movie: IMovie) => (
+      {movies.map((movie: Movie) => (
         <h2 key={movie.id}>{movie.title}</h2>
       ))}
     </>

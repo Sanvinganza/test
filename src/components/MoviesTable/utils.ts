@@ -1,4 +1,4 @@
-import { IMovie, Order, OrderBy } from "./types";
+import { Movie, Movies, Order, OrderBy } from "./types";
 
 export function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -22,13 +22,9 @@ export function getComparator(
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-export function stableSort(
-  array: IMovie[],
-  order: Order,
-  orderBy: keyof IMovie
-) {
-  const stabilizedThis = array.map(
-    (el, index) => [el, index] as [IMovie, number]
+export function stableSort(movies: Movies, order: Order, orderBy: OrderBy) {
+  const stabilizedThis = movies.map(
+    (movie, index) => [movie, index] as [Movie, number]
   );
   const comparator = getComparator(order, orderBy);
 

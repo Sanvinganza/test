@@ -10,7 +10,6 @@ import { observer, useLocalObservable } from "mobx-react-lite";
 import { useGetOnRowsPerPageChange } from "./hooks/useGetOnRowsPerPageChange";
 import { useGetOnPageChange } from "./hooks/useGetOnPageChange";
 import { movieTableState } from "./stateMovieTable";
-import { rowsPerPageOptions } from "./constants";
 
 export const TableMovies = observer(() => {
   const {
@@ -52,9 +51,9 @@ export const TableMovies = observer(() => {
             <MoviesTableHead
               movies={movies}
               selected={selected}
-              setSelected={setSelected}
               order={order}
               orderBy={orderBy}
+              setSelected={setSelected}
               setOrder={setOrder}
               setOrderBy={setOrderBy}
             />
@@ -65,17 +64,14 @@ export const TableMovies = observer(() => {
               page={page}
               rowsPerPage={rowsPerPage}
               selected={selected}
-              setOrder={setOrder}
-              setOrderBy={setOrderBy}
               setSelected={setSelected}
             />
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={rowsPerPageOptions}
+          rowsPerPage={rowsPerPage}
           component="div"
           count={movies.length}
-          rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={onPageChange}
           onRowsPerPageChange={onRowsPerPageChange}

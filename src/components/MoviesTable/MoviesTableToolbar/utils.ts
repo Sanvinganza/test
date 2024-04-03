@@ -1,13 +1,15 @@
-import { IMovie, Selected } from "../types";
+import { Movie, Movies, Selected } from "../types";
 
 export const deleteMovieTableHookUtils = (
   selected: Selected,
-  movies: IMovie[]
+  movies: Movies
 ) => {
-  let newMovies = [...movies] as IMovie[];
+  let newMovies = [...movies] as Movies;
 
   selected.forEach((selectedItem) => {
-    newMovies = newMovies.filter((movie: IMovie) => movie.id !== selectedItem);
+    newMovies = newMovies.filter(
+      (movie: Movie) => movie.id !== selectedItem
+    ) as Movies;
   });
 
   return newMovies;

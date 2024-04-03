@@ -1,56 +1,72 @@
-import { rowsPerPageOptions } from "./constants";
-import { movieTableState } from "./stateMovieTable";
+import { IObservableArray } from "mobx";
+import { rowsPerPage } from "./constants";
 
-export type IMovie = {
+export interface HeadCell {
+  disablePadding: boolean;
+  id: keyof Movie;
+  label: string;
+  numeric: boolean;
+}
+
+export type Movie = {
   id: number;
   title: string;
   rating: string;
   timeline: string;
   year: string;
 };
-
+export type SetMovies = (movie: Movies) => void;
 export type Order = "asc" | "desc";
+export type SetOrder = (order: Order) => void;
+export type Page = number;
+export type SetPage = (page: Page) => void;
+export type Selected = number[];
+export type SetSelected = (selected: Selected) => void;
+export type OrderBy = keyof Movie;
+export type SetOrderBy = (orderBy: OrderBy) => void;
+export type RowsPerPage = (typeof rowsPerPage)[number];
+export type SetRowsPerPage = (rowsPerPage: RowsPerPage) => void;
 
-export interface HeadCell {
-  disablePadding: boolean;
-  id: keyof IMovie;
-  label: string;
-  numeric: boolean;
+export type Movies = IObservableArray<Movie>;
+
+export interface MovieTableState {
+  movies: IObservableArray<Movie>;
+  setMovies: SetMovies;
+  order: Order;
+  setOrder: SetOrder;
+  selected: Selected;
+  setSelected: SetSelected;
+  page: Page;
+  setPage: SetPage;
+  rowsPerPage: RowsPerPage;
+  setRowsPerPage: SetRowsPerPage;
+  orderBy: OrderBy;
+  setOrderBy: SetOrderBy;
 }
-
-export type OrderBy = keyof IMovie;
-
-export type IMovieTableState = typeof movieTableState;
 
 export interface MoviesTableHeadProps {
   order: Order;
-  orderBy: keyof IMovie;
-  setOrderBy: (orderBy: OrderBy) => void;
-  setOrder: (order: Order) => void;
+  orderBy: OrderBy;
   selected: Selected;
-  setSelected: (selected: Selected) => void;
-  movies: IMovie[];
+  movies: Movies;
+  setOrderBy: SetOrderBy;
+  setOrder: SetOrder;
+  setSelected: SetSelected;
 }
-
-export type Selected = number[];
 
 export interface MoviesTableToolbarProps {
-  movies: IMovie[];
-  setMovies: (movies: IMovie[]) => void;
+  movies: Movies;
+  setMovies: SetMovies;
   selected: Selected;
-  setSelected: (selected: Selected) => void;
+  setSelected: SetSelected;
 }
 
-export interface MoviesTableBodyProps {
+export type MoviesTableBodyProps = {
   selected: Selected;
-  setSelected: (selected: Selected) => void;
+  movies: Movies;
   order: Order;
-  orderBy: keyof IMovie;
-  setOrderBy: (orderBy: OrderBy) => void;
-  setOrder: (order: Order) => void;
-  movies: IMovie[];
-  page: number;
-  rowsPerPage: rowsPerPageOptions;
-}
-
-export type rowsPerPageOptions = (typeof rowsPerPageOptions)[number];
+  orderBy: OrderBy;
+  page: Page;
+  rowsPerPage: RowsPerPage;
+  setSelected: SetSelected;
+};

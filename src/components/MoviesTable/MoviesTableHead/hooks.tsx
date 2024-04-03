@@ -1,4 +1,4 @@
-import { IMovie, Order, OrderBy, Selected } from "../types";
+import { Movie, Order, OrderBy, Selected } from "../types";
 import { useMovieTableContext } from "../hooks/useMovieTableContext";
 
 export const useGetOnSortHandle = (
@@ -9,7 +9,7 @@ export const useGetOnSortHandle = (
 ) => {
   const onSortHandle = (
     _: React.MouseEvent<unknown>,
-    property: keyof IMovie
+    property: keyof Movie
   ) => {
     setOrder(orderBy === property && order === "asc" ? "desc" : "asc");
     setOrderBy(property);
@@ -22,7 +22,7 @@ export const useGetOnSortHandle = (
 
 export const useGetOnSelectAllClick = (
   setSelected: (selected: Selected) => void,
-  movies: IMovie[]
+  movies: Movie[]
 ) => {
   const onSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
