@@ -5,6 +5,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import { mockMovie1 } from "./__mock__/mockMovie";
 import { MovieTableContextProvider } from "../../../providers/MovieTableContextProvider";
 import { useMovieTableContext } from "../hooks/useMovieTableContext";
+import { Movies } from "../types";
 
 describe("stateMovieTable", () => {
   beforeEach(() => {
@@ -13,7 +14,7 @@ describe("stateMovieTable", () => {
 
   test("set-функции работают корректно", () => {
     const { result } = renderHook(() => useMovieTableContext());
-    result.current.setMovies([mockMovie1]);
+    result.current.setMovies([mockMovie1] as Movies);
     result.current.setOrder("desc");
     result.current.setOrderBy("id");
     result.current.setPage(2);

@@ -1,3 +1,4 @@
+import { Movies } from "../types";
 import { descendingComparator, stableSort } from "../utils";
 import { mockMovie1, mockMovie2 } from "./__mock__/mockMovie";
 
@@ -12,9 +13,17 @@ describe("Utils TableMovies", () => {
     expect(result3).toEqual(0);
   });
   test("stableSort работает корректно", () => {
-    const result1 = stableSort([mockMovie1, mockMovie2], "asc", "id");
-    const result2 = stableSort([mockMovie1, mockMovie2], "desc", "timeline");
-    const result3 = stableSort([mockMovie1, mockMovie2], "asc", "rating");
+    const result1 = stableSort([mockMovie1, mockMovie2] as Movies, "asc", "id");
+    const result2 = stableSort(
+      [mockMovie1, mockMovie2] as Movies,
+      "desc",
+      "timeline"
+    );
+    const result3 = stableSort(
+      [mockMovie1, mockMovie2] as Movies,
+      "asc",
+      "rating"
+    );
 
     expect(result1).toEqual([mockMovie1, mockMovie2]);
     expect(result2).toEqual([mockMovie1, mockMovie2]);
